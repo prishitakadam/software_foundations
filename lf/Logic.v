@@ -480,8 +480,8 @@ Definition manual_grade_for_double_neg_inf : option (nat*string) := None.
 Theorem contrapositive : forall (P Q : Prop),
   (P -> Q) -> (~Q -> ~P).
 Proof.
-  intros P Q HPQ HQ HP.
-  unfold not in HQ. apply HPQ in HP. apply HQ in HP. apply HP.
+  intros P Q NPQ NQ NP.
+  unfold not in NQ. apply NQ in NPQ. apply NPQ. apply NP. 
 Qed.
 (** [] *)
 
